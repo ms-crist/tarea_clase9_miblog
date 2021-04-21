@@ -7,11 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Blog</title>
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/formulario.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
     <script src="./js/codigo.js"></script>
+    <script src="./js/formulario.js"></script>
 </head>
 
 <body>
@@ -19,70 +21,68 @@
         <header id="cabecera">
             Mi blog
         </header>
+    </div>
+    <div id="contenedor-principal">
+
         <section id="seccion">
-            <article id="articulo1">
+            <div id="seccion-uno">
+                <article id="articulo1">
 
-                <figure id="imagen1">
-                    <img src="img/open-2.jpg" alt="">
-                </figure>
-                <div id="art1">
-                    Nombre del Articulo
-                </div>
+                    <figure id="imagen1">
+                        <img id="imagen1" src="img/open-2.jpg" alt="">
+                    </figure>
+                </article>
+                <article id="articulo2">
+                    <h1 id="art1">Nombre del Articulo</h1>
+                    <div id="contenedor1">
+                        <div class="contenedor-galeria">
+                            <img class="foto1" src="img/camara.jpg" alt="">
+                            <h2 id="art2">Articulo 1</h2>
+                        </div>
+                        <div class="contenedor-galeria2">
+                            <img class="foto2" src=" img/ofic.jpg" alt="">
+                            <h2 id="art3">Articulo 2</h2>
+                        </div>
 
-            </article>
-            <article id="articulo2">
-                <div id="contenedor">
-                    <figure id="imagen2">
-                        <img src="img/camara.jpg" alt="">
-                    </figure>
-                    <figure id="imagen3">
-                        <img src="img/ofic.jpg" alt="">
-                    </figure>
-                </div>
-                <div id="contenedor2">
-                    <div id="art2">
-                        Articulo 1
                     </div>
-                    <div id="art3">
-                        Articulo 2
-                    </div>
-                </div>
-            </article>
-            <article id="articulo3">
-                <div id="contenedor3">
-                    <div id="art4">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem alias placeat ducimus
-                        eveniet,
-                        necessitatibus modi perspiciatis assumenda, quibusdam commodi corrupti architecto praesentium
-                        aspernatur
-                        minus nemo quae accusantium laborum! Totam, adipisci.
-                    </div>
-                </div>
-            </article>
+                </article>
+            </div>
+
+            <div id="contenedor3">
+                <p id="art4">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem alias placeat
+                    ducimus
+                    eveniet,
+                    necessitatibus modi perspiciatis assumenda, quibusdam commodi corrupti architecto
+                    praesentium
+                    aspernatur
+                    minus nemo quae accusantium laborum! Totam, adipisci.
+                </p>
+            </div>
+
         </section>
-    </div>
-    <div id="col">
-        <aside id="columna">
-            <figure id="imagen4">
-                <img src="img/book.jpg" alt="">
-            </figure>
-            <div id="art5">
-                Otro
-            </div>
-            <div id="art6">
-                Recibe noticias
-            </div>
-            <form name="miFormulario" id="miFormulario">
-                <span>Nombre</span><input id="campo" type="text" name="nombre" placeholder="Nombre" required
-                    multiple><br>
-                <span>Email</span><input id="campo1" type="email" placeholder="Email" required><br>
-                <span>Teléfono</span><input id="campo2" type="tel" required placeholder="Teléfono"><br>
 
-                <input type="submit" id="boton" value="Enviar">
-            </form>
-        </aside>
-    </div>
+        <div id="columna-container">
+            <aside id="columna">
+                <img id="bookid" src="img/book.jpg" alt="">
+                <h3 id="art6">Otro</h3>
 
+                <h3 id="art7">
+                    Recibe noticias
+                </h3>
+                <form name="miFormulario" id="miFormulario">
+                    <input id="campo" type="text" name="nombre" placeholder="Nombre" required multiple
+                        onchange="ValidaNombre()"><br>
+                    <p id="msgNombre"></p>
+                    <input id="campo1" type="email" placeholder="Email" required onchange="Validacorreo()"><br>
+                    <p id="msgCorreo"></p>
+                    <input id="campo2" type="tel" placeholder="Teléfono" required onchange="Validatel()"><br>
+                    <p id="msgTel"></p>
+                    <input type="submit" id="boton" value="Enviar">
+                </form>
+            </aside>
+        </div>
+    </div>
 </body>
 
 </html>
