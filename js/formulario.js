@@ -14,15 +14,16 @@ function ValidaNombre(){
 }
 
 function Validacorreo(){
-    var campo = document.getElementById("campo1").value;
+    var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    var correo = document.getElementById("campo1").value;
     var mensaje = document.getElementById("msgCorreo");
 
-    if(campo.length < 5){
-        mensaje.innerText = "El email debe de tener al menos 5 caracteres";
+    if(!regex.test(correo)){
+        mensaje.innerText = "Ingrese un correo válido!";
         mensaje.classList.remove("exito");
         mensaje.classList.add("error");
     }else{
-        mensaje.innerText = "El email es correcto.";
+        mensaje.innerText = "El correo ingresado es correcto";
         mensaje.classList.remove("error");
         mensaje.classList.add("exito");
     }
